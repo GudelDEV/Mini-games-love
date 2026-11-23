@@ -39,15 +39,22 @@ export function journeyReducer(state, action) {
         openedCards: [...state.openedCards, action.payload],
       };
 
-    case 'COMPLETE_CHAPTER':
+    case 'COMPLETE_CHAPTER': {
+      const nextChapter = state.currentChapter + 1;
+
+      const completedChapters = [...new Set([...state.completedChapters, state.currentChapter])];
+
+      const isLastChapter = nextChapter >= action.totalChapters;
+
       return {
         ...state,
-        completedChapters: [...new Set([...state.completedChapters, state.currentChapter])],
-        currentPage: state.currentChapter === 6 ? 'final' : 'code',
-        currentChapter: state.currentChapter === 6 ? state.currentChapter : state.currentChapter + 1,
+        completedChapters,
+        currentPage: isLastChapter ? 'final' : 'code',
+        currentChapter: isLastChapter ? state.currentChapter : nextChapter,
         openedCards: [],
         error: '',
       };
+    }
 
     case 'RESTORE_PROGRESS':
       return {

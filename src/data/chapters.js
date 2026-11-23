@@ -7,7 +7,8 @@ export const chapters = [
     correctCard: 'A',
     cards: {
       A: {
-        message: 'Pesan untuk kartu A.',
+        message:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       },
       B: {
         message: 'Pesan untuk kartu B.',
@@ -80,7 +81,10 @@ export const chapters = [
     question: 'Pertanyaan hadiah ketujuh.',
     correctCard: 'A',
     cards: {
-      A: { message: 'Pesan kartu A.' },
+      A: {
+        message:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
       B: { message: 'Pesan kartu B.' },
     },
   },

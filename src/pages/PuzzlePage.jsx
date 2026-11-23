@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Heart, Sparkles, ArrowRight } from 'lucide-react';
+import { Heart, Sparkles, ArrowRight, Lock } from 'lucide-react';
+import { chapters } from '../data/chapters';
 
 import PolaroidCard from '../components/gift/PolaroidCard';
 
@@ -8,22 +9,23 @@ function PuzzlePage({ chapter, openedCards, onOpenCard, onContinue }) {
 
   const hasOpenedWrongCard = openedCards.some((card) => card !== chapter.correctCard);
 
+  const isFirstAttempt = openedCards.length === 1 && hasOpenedCorrectCard;
+
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-cream px-6 py-14">
-      <div className="pointer-events-none absolute left-10 top-12 text-rose/50">
-        <Sparkles size={28} />
-      </div>
-
-      <div className="pointer-events-none absolute bottom-12 right-10 text-rose/50">
-        <Heart size={30} />
-      </div>
-
       <div className="relative z-10 w-full max-w-3xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <p className="text-xs uppercase tracking-[0.3em] text-dusty">Chapter {chapter.id} of 7</p>
+          <Sparkles
+            className="mx-auto text-dusty"
+            size={25}
+          />
+
+          <p className="mt-5 text-xs uppercase tracking-[0.3em] text-dusty">
+            Chapter {chapter.id} of {chapters.length}
+          </p>
 
           <h1 className="mt-3 font-display text-4xl text-ink">{chapter.title}</h1>
 
@@ -33,24 +35,48 @@ function PuzzlePage({ chapter, openedCards, onOpenCard, onContinue }) {
         </motion.div>
 
         <div className="mt-12 grid grid-cols-2 justify-items-center gap-5 sm:gap-10">
-          {['A', 'B'].map((cardKey, index) => (
-            <motion.div
-              key={cardKey}
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2 }}
-              className="w-full max-w-[250px]"
-            >
-              <PolaroidCard
-                cardKey={cardKey}
-                message={chapter.cards[cardKey].message}
-                isOpen={openedCards.includes(cardKey)}
-                onClick={() => onOpenCard(cardKey)}
-              />
-            </motion.div>
-          ))}
+          {['A', 'B'].map((cardKey, index) => {
+            const isOpened = openedCards.includes(cardKey);
+
+            const isLocked = hasOpenedCorrectCard && !isOpened;
+
+            return (
+              <motion.div
+                key={cardKey}
+                initial={{ opacity: 0, y: 25 }}
+                animate={{
+                  opacity: isLocked ? 0.55 : 1,
+                  y: 0,
+                }}
+                transition={{ delay: index * 0.2 }}
+                className="relative w-full max-w-[250px]"
+              >
+                <PolaroidCard
+                  cardKey={cardKey}
+                  message={chapter.cards[cardKey].message}
+                  isOpen={isOpened}
+                  isLocked={isLocked}
+                  onClick={() => {
+                    if (!isOpened && !hasOpenedCorrectCard) {
+                      onOpenCard(cardKey);
+                    }
+                  }}
+                />
+
+                {isLocked && (
+                  <div className="absolute inset-0 z-20 flex items-center justify-center rounded-xl bg-ink/10 backdrop-blur-[2px]">
+                    <Lock
+                      className="text-ink/50"
+                      size={25}
+                    />
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
 
+        {/* Wrong answer */}
         {hasOpenedWrongCard && !hasOpenedCorrectCard && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -68,17 +94,25 @@ function PuzzlePage({ chapter, openedCards, onOpenCard, onContinue }) {
           </motion.div>
         )}
 
+        {/* Correct answer */}
         {hasOpenedCorrectCard && (
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             className="mx-auto mt-8 max-w-md"
           >
-            <p className="font-display text-xl text-dusty">You found the right memory!</p>
+            {isFirstAttempt && (
+              <p className="mb-5 font-display text-base italic text-dusty">
+                Terima kasih sudah mengingat aku lagi, walau hanya sebentar.
+              </p>
+            )}
+
+            {!isFirstAttempt && <p className="mb-5 font-display text-lg text-dusty">You found the right memory!</p>}
 
             <button
+              type="button"
               onClick={onContinue}
-              className="mt-6 inline-flex items-center gap-3 rounded-full bg-dusty px-8 py-4 text-sm text-white transition hover:bg-ink"
+              className="inline-flex items-center gap-3 rounded-full bg-dusty px-8 py-4 text-sm text-white transition hover:bg-ink"
             >
               Continue Journey
               <ArrowRight size={17} />

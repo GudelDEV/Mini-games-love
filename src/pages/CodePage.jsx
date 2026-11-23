@@ -5,7 +5,7 @@ import { chapters } from '../data/chapters';
 
 function CodePage({ chapter, onSubmitCode, error }) {
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cream px-6 py-12">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cream px-6 pb-8 pt-24 sm:py-12">
       <div className="pointer-events-none absolute left-12 top-16 text-rose/50">
         <Sparkles size={26} />
       </div>
@@ -20,7 +20,7 @@ function CodePage({ chapter, onSubmitCode, error }) {
           animate={{ opacity: 1 }}
           className="mb-8"
         >
-          <p className="text-xs uppercase tracking-[0.3em] text-dusty">
+          <p className="text-xs uppercase tracking-[0.3em] text-dusty ">
             Chapter {chapter.id} of {chapters.length}
           </p>
 

@@ -58,9 +58,9 @@ function App() {
   function handleContinue() {
     dispatch({
       type: 'COMPLETE_CHAPTER',
+      totalChapters: chapters.length,
     });
   }
-
   const showDecorations = currentPage !== 'welcome';
 
   return (
@@ -79,7 +79,10 @@ function App() {
 
       {currentPage !== 'welcome' && currentPage !== 'final' && (
         <div className="fixed left-0 right-0 top-6 z-30 px-6">
-          <ChapterProgress currentChapter={currentChapter + 1} />
+          <ChapterProgress
+            currentChapter={currentChapter + 1}
+            totalChapters={chapters.length}
+          />
         </div>
       )}
 

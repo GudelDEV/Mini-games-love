@@ -2,12 +2,14 @@ import { createContext, useEffect, useReducer } from 'react';
 
 import { initialJourneyState, journeyReducer } from './journeyReducer';
 
+import { chapters } from '../data/chapters';
 export const JourneyContext = createContext(null);
 
 const STORAGE_KEY = 'graduation-journey-progress';
 
 const validChapters = (value) =>
-  Array.isArray(value) && value.every((chapter) => Number.isInteger(chapter) && chapter >= 0 && chapter <= 6);
+  Array.isArray(value) &&
+  value.every((chapter) => Number.isInteger(chapter) && chapter >= 0 && chapter < chapters.length);
 
 const validCards = (value) => Array.isArray(value) && value.every((card) => ['A', 'B'].includes(card));
 
@@ -25,7 +27,7 @@ function getInitialState() {
       !validPages.includes(parsed.currentPage) ||
       !Number.isInteger(parsed.currentChapter) ||
       parsed.currentChapter < 0 ||
-      parsed.currentChapter > 6 ||
+      parsed.currentChapter >= chapters.length ||
       !validChapters(parsed.completedChapters) ||
       !validCards(parsed.openedCards) ||
       typeof parsed.error !== 'string'
