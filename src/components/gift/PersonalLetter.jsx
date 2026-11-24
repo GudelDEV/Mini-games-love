@@ -27,7 +27,7 @@ function PersonalLetter() {
               initial={{ y: 35, opacity: 0 }}
               animate={{ y: -115, opacity: 1 }}
               transition={{ duration: 0.9, ease: 'easeOut' }}
-              className="absolute inset-x-5 bottom-10 z-10 rounded-md bg-[#FFFCF7] p-5 shadow-lg"
+              className="absolute inset-x-5 bottom-10 z-10 max-h-[70vh] letter-scroll rounded-md bg-[#FFFCF7] p-5 shadow-lg"
             >
               <Heart
                 size={20}
@@ -37,20 +37,51 @@ function PersonalLetter() {
               <p className="font-display text-xl text-ink">Dear You,</p>
 
               <p className="mt-3 text-xs leading-6 text-ink/70">
-                Ada banyak cerita yang pernah kita lalui. Terima kasih untuk setiap kenangan dan pelajaran yang pernah
-                hadir.
+                Ada banyak cerita yang pernah kita lalui. Terima kasih untuk setiap kenangan, tawa, dan pelajaran yang
+                pernah hadir. Mungkin sekarang semuanya hanya menjadi bagian dari masa lalu, tetapi setidaknya kita
+                pernah memiliki cerita yang begitu berarti.
               </p>
 
-              <p className="t-3 text-xs leading-6 text-ink/70">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus aliquam cum rerum, illo dolores, rem
-                asperiores dolore hic, sit maxime quo provident in ex illum iure eveniet vero aliquid? Consequuntur
-                voluptatum, ut dolores iste quod laborum explicabo quo ipsum suscipit quas? Facere temporibus sint
-                tenetur excepturi similique deserunt ex voluptate, soluta hic. Velit eius tempore nisi laudantium nam
-                voluptatum suscipit magnam inventore laborum hic, dolores ipsum quod porro aut fuga consequuntur
-                laboriosam reiciendis consectetur beatae officiis perferendis? Nisi tenetur aspernatur placeat delectus!
-                Rerum officiis ab quas optio vero. Nam quibusdam illo corrupti culpa quidem dolorum laboriosam ad,
-                repellat aperiam mollitia?
+              <p className="mt-3 text-xs leading-6 text-ink/70">
+                Gimana perasaannya setelah menyelesaikan perjalanan ini? WKWKWK. Capek yah? Udah mah harus mengingat
+                tempat, menyusun kode, memilih kartu, masih harus mikir juga jawabannya apa. Semoga kalian menikmati
+                setiap bagian dari game kecil ini.
               </p>
+
+              <p className="mt-3 text-xs leading-6 text-ink/70">
+                Kita memang jarang nongkrong di kafe. Kebanyakan justru di warung, di rumah, atau sekadar menyusuri
+                jalan tanpa tujuan yang terlalu jelas. Tapi lucunya, justru tempat-tempat sederhana itulah yang sekarang
+                bisa membuat aa berpikir, "Wah, dulu di jalan ini pernah begini, pernah begitu." Sebenarnya masih banyak
+                foto dan tempat kenangan kita berdua yang belum aa masukkan ke dalam puzzle. Bukan karena lupa, tetapi
+                kalau semuanya dimasukkan, bisa-bisa game ini selesai besok pagi. Kasihan kalian berdua WKWKWK.
+              </p>
+
+              <p className="mt-3 text-xs leading-6 text-ink/70">
+                Dan untuk Wili, sekarang kamu punya seorang teman yang begitu berharga. Seseorang yang ikut menemani
+                perjalanan kecil ini, membuka kado ini bersama kamu, dan mungkin ikut dibuat pusing oleh semua kode yang
+                aa buat. Dia adalah Teh Emo. Sebagai bentuk apresiasi aa untuk Teh Emo, namanya sengaja aa jadikan kode
+                terakhir. Mungkin kalian sempat kesel dengan kalimat "kode terakhir", apalagi setelah semua kode itu
+                digabungkan ternyata menjadi...
+                <span className="font-semibold text-ink"> "EMOSI YAH WKWKWK."</span>
+              </p>
+
+              <p className="mt-3 text-xs leading-6 text-ink/70">
+                Semoga kamu dan Teh Emo menikmati game ini, yah. Walaupun mungkin sempat kesel, bingung, bahkan
+                berpikir, "Mantan lu gini amat, yah?" WKWKWKWK.
+              </p>
+
+              <p className="mt-3 text-xs leading-6 text-ink/70">
+                Nah, sekarang aa kasih tahu jawabannya. Hadiah sebenarnya ada di dalam bucket yang aa berikan. Jadi,
+                jangan lupa untuk membukanya, karena masih ada sesuatu di sana yang belum kalian temukan.
+              </p>
+
+              <p className="mt-3 text-xs leading-6 text-ink/70">
+                Terima kasih sudah menyelesaikan game ini sampai akhir. Dan untuk foto-foto yang tersisa, semuanya
+                adalah potongan tempat dan kenangan yang pernah kita lalui bersama. Mungkin tidak semuanya muncul di
+                dalam permainan ini, tetapi setiap tempat punya ceritanya sendiri.
+              </p>
+
+              <p className="mt-5 text-xs leading-6 text-ink/70">Sekali lagi, terima kasih sudah bermain.</p>
 
               <p className="mt-4 font-display italic text-dusty">- SYAI</p>
             </motion.div>

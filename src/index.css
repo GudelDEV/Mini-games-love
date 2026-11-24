@@ -46,6 +46,31 @@ body {
   color: #76515c;
 }
 
+.letter-scroll {
+  max-height: 70vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #d9a5b2 transparent;
+}
+
+.letter-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.letter-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.letter-scroll::-webkit-scrollbar-thumb {
+  background: #d9a5b2;
+  border-radius: 999px;
+}
+
+.letter-scroll::-webkit-scrollbar-thumb:hover {
+  background: #bd8293;
+}
+
 /* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,

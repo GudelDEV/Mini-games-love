@@ -43,14 +43,38 @@ function AppreciationNote() {
           </div>
 
           <div className="mx-auto max-w-lg space-y-5 text-sm leading-8 text-ink/65">
-            <p>Ada satu orang lagi yang ingin aku apresiasi dalam perjalanan kecil ini.</p>
+            <p>Ada satu orang lagi yang ingin aku beri sedikit ruang dalam cerita kecil ini.</p>
 
             <p>
-              Terima kasih sudah bersedia membantu mengantarkan hadiah ini dan menemani Wili membukanya. Mungkin
-              terlihat sederhana, tetapi bantuanmu punya arti tersendiri dalam kejutan ini.
+              Terima kasih sudah bersedia membantu mengantarkan hadiah ini dan menemani Wili membukanya. Mungkin Untuk
+              Teh Emo, terima kasih sudah bersedia menjadi bagian dari kejutan ini. Terima kasih karena telah membantu
+              mengantarkan hadiah dan menemani Wili membukanya. Mungkin bagimu itu hanya bantuan sederhana, tetapi bagi
+              syai, kehadiran teh emo punya arti tersendiri dalam cerita ini.
             </p>
 
-            <p>Aku menghargai kebaikanmu sebagai teman Wili. Semoga hal-hal baik juga selalu menyertaimu.</p>
+            <p>
+              Dan untuk kelulusan teh emo , selamat atas satu perjalanan yang berhasil teh emo tuntaskan. Tidak semua
+              langkah selalu mudah, tidak semua lelah terlihat oleh orang lain. Namun, hari ini menjadi bukti bahwa
+              segala usaha dan waktu yang telah teh emo berikan akhirnya membawamu sampai di titik ini.
+            </p>
+
+            <p>
+              Semoga setelah satu pintu tertutup, akan ada banyak pintu lain yang terbuka untuk teh emo. Semoga langkah
+              teh emo selalu dipertemukan dengan kesempatan baik, orang-orang tulus, dan kebahagiaan yang tidak perlu
+              teh emo perjuangkan sendirian.
+            </p>
+
+            <p>
+              Hadiah kecil ini mungkin tidak seberapa dibandingkan perjalanan panjang yang telah teh emo lalui. Namun,
+              semoga ia bisa menjadi pengingat bahwa pencapaianmu layak dirayakan dan kebaikanmu layak dihargai.
+            </p>
+
+            <p>
+              Sekali lagi, selamat wisuda, Teh Emo. Semoga dunia memperlakukanmu dengan baik, sebagaimana teh emo telah
+              memperlakukan orang-orang di sekitarmu dengan baik.
+            </p>
+
+            <p className="mt-10 font-display text-xl italic text-dusty">HIDUP AKAN TERUS BERLANJUT APAPUN KEADAANYA</p>
           </div>
 
           <p className="mt-10 font-display text-xl italic text-dusty">Thank you, Teh Emo.</p>

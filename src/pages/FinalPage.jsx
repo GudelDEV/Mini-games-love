@@ -29,7 +29,7 @@ function FinalPage() {
             className="mx-auto text-dusty"
           />
 
-          <p className="mt-7 text-xs uppercase tracking-[0.35em] text-dusty">Seven Chapters, One Journey</p>
+          <p className="mt-7 text-xs uppercase tracking-[0.35em] text-dusty">Thirteen Chapters, One Journey</p>
 
           <h1 className="mt-5 font-display text-5xl leading-tight text-ink md:text-7xl">
             The Last

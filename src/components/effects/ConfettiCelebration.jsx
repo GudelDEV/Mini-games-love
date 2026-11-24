@@ -1,17 +1,9 @@
-
-import { useEffect } from "react";
-import confetti from "canvas-confetti";
+import { useEffect } from 'react';
+import confetti from 'canvas-confetti';
 
 function ConfettiCelebration() {
   useEffect(() => {
-    const colors = [
-      "#E8AAB8",
-      "#D8B4E2",
-      "#F3D9C4",
-      "#C5D8C0",
-      "#F8E8A8",
-      "#FFFFFF",
-    ];
+    const colors = ['#E8AAB8', '#D8B4E2', '#F3D9C4', '#C5D8C0', '#F8E8A8', '#FFFFFF'];
 
     const duration = 3500;
     const end = Date.now() + duration;
