@@ -7,11 +7,16 @@ import AppreciationNote from '../components/gift/AppreciationNote';
 
 import MemoryGallery from '../components/gift/MemoryGallery';
 
+import ConfettiCelebration from '../components/effects/ConfettiCelebration';
+
 import ResetJourneyButton from '../components/common/ResetJourneyButton';
 
 function FinalPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-cream pb-16">
+      {/* Conffety */}
+      <ConfettiCelebration />
+
       {/* Opening */}
       <section className="flex min-h-[85vh] flex-col items-center justify-center px-6 text-center">
         <motion.div
