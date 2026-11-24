@@ -8,7 +8,7 @@ export const gallery = [
   },
   {
     id: 2,
-    image: '/images/gallery/memory-1.jpg',
+    image: '/images/gallery/memory-2.jpg',
     caption: 'Some moments stay forever.',
     date: 'One of our days',
     rotate: 2,
